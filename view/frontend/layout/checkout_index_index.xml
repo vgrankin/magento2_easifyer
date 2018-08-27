@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  @author Phpcoder
+ *  @copyright Copyright (c) 2018 Phpcoder (https://github.com/vgrankin)
+ *  @package Phpcoder_Easifyer
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="formTemplate" xsi:type="string">
+                                                            Phpcoder_Easifyer/shipping-address/form
+                                                        </item>
+                                                    </item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="before-form" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="custom-shipping-step-fields"
+                                                                      xsi:type="array">
+                                                                    <item name="component" xsi:type="string">
+                                                                        uiComponent
+                                                                    </item>
+                                                                    <item name="displayArea" xsi:type="string">
+                                                                        custom-shipping-step-fields
+                                                                    </item>
+                                                                    <item name="children" xsi:type="array">
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
