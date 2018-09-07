@@ -25,11 +25,6 @@ class LayoutProcessorPlugin
         array $jsLayout
     )
     {
-
-        $validation = [
-            'validate-length' => 40
-        ];
-
         $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']
         ['shippingAddress']['children']['before-form']['children']['custom-shipping-step-fields']['children']['external_order_id_field'] = [
             'component' => "Magento_Ui/js/form/element/abstract",
@@ -43,7 +38,11 @@ class LayoutProcessorPlugin
             'label' => "External Order ID",
             'provider' => 'checkoutProvider',
             'visible' => true,
-            'validation' => $validation,
+            'validation' => [
+                'required-entry' => false,
+                'min_text_len‌​gth' => 1,
+                'max_text_length' => 40
+            ],
             'sortOrder' => 10,
             'id' => 'custom_shipping_field[external_order_id_field]'
         ];
